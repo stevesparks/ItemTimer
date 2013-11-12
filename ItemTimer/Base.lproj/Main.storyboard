@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="13A598" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ITViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="8HT-Lj-nNg"/>
+                        <viewControllerLayoutGuide type="bottom" id="bmu-CU-ZkW"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SCe-Kv-GxY">
+                                <rect key="frame" x="65" y="195" width="191" height="177"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="177" id="6av-tD-r3p"/>
+                                    <constraint firstAttribute="width" constant="191" id="mx0-fj-Hmi"/>
+                                </constraints>
+                                <state key="normal" backgroundImage="red_button">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="bigRedButtonPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="ZKX-kf-P4y"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ready" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CC7-fh-JGj">
+                                <rect key="frame" x="53" y="77" width="215" height="63"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="63" id="IAj-dH-gU9"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="48"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qc7-lr-2Cw">
+                                <rect key="frame" x="137" y="533" width="45" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="yrP-ic-x38"/>
+                                </constraints>
+                                <state key="normal" title="cancel">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="cancelButtonPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="jCa-RX-9gg"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="SCe-Kv-GxY" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="65" id="4Cb-Rh-qHT"/>
+                            <constraint firstItem="CC7-fh-JGj" firstAttribute="top" secondItem="8HT-Lj-nNg" secondAttribute="bottom" constant="57" id="7zx-EV-zVR"/>
+                            <constraint firstItem="SCe-Kv-GxY" firstAttribute="top" secondItem="CC7-fh-JGj" secondAttribute="bottom" constant="55" id="BZO-tr-MMz"/>
+                            <constraint firstAttribute="trailing" secondItem="CC7-fh-JGj" secondAttribute="trailing" constant="52" id="TOM-Dh-8px"/>
+                            <constraint firstItem="bmu-CU-ZkW" firstAttribute="top" secondItem="Qc7-lr-2Cw" secondAttribute="bottom" constant="5" id="ic3-g3-eum"/>
+                            <constraint firstItem="Qc7-lr-2Cw" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="137" id="j5S-u8-PSh"/>
+                            <constraint firstItem="CC7-fh-JGj" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="53" id="poz-LU-4Dd"/>
+                            <constraint firstAttribute="trailing" secondItem="Qc7-lr-2Cw" secondAttribute="trailing" constant="137" id="yiJ-id-GME"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="timerLabel" destination="CC7-fh-JGj" id="2N9-Pv-GfE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="red_button" width="191" height="177"/>
+    </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>
