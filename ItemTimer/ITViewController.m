@@ -13,7 +13,8 @@
 @property (weak, nonatomic) IBOutlet UILabel *timerLabel;
 @property (strong, nonatomic) NSTimer *countdownTimer;
 @property (strong, nonatomic) NSTimer *labelUpdateTimer;
-@property (strong, nonatomic) AVAudioPlayer *audioFile;
+@property (strong, nonatomic) AVAudioPlayer *trombonePlayer;
+@property (strong, nonatomic) AVAudioPlayer *dingPlayer;
 @property (nonatomic) NSTimeInterval countdownTime;
 @end
 
@@ -26,9 +27,15 @@
 
 	NSString *fileName = [[NSBundle mainBundle] pathForResource:@"sadtrombone" ofType:@"wav"];
     NSURL *url = [[NSURL alloc] initFileURLWithPath:fileName];
-    _audioFile = [[AVAudioPlayer alloc] initWithContentsOfURL:url error:NULL];
-    _audioFile.volume = 1;
-	[_audioFile prepareToPlay];
+    _trombonePlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:url error:NULL];
+    _trombonePlayer.volume = 1;
+	[_trombonePlayer prepareToPlay];
+
+	fileName = [[NSBundle mainBundle] pathForResource:@"ding" ofType:@"wav"];
+    url = [[NSURL alloc] initFileURLWithPath:fileName];
+    _dingPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:url error:NULL];
+    _dingPlayer.volume = 1;
+	[_dingPlayer prepareToPlay];
 
 	// Do any additional setup after loading the view, typically from a nib.
 }
@@ -61,6 +68,7 @@
 	_timerLabel.text = @"";
 	_timerLabel.textColor = [UIColor blackColor];
 
+	[_dingPlayer play];
 	if(_countdownTimer) {
 		[_countdownTimer invalidate];
 		_countdownTimer = nil;
@@ -73,7 +81,7 @@
 - (void)countdownTimerFired:(NSTimer *)timer {
 	_timerLabel.text = @"FAIL!!";
 	_timerLabel.textColor = [UIColor redColor];
-	[_audioFile play];
+	[_trombonePlayer play];
 	_countdownTimer = nil;
 }
 

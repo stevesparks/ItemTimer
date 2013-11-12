@@ -23,6 +23,7 @@
 		0EA09C23183283DB0066A567 /* ItemTimerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EA09C22183283DB0066A567 /* ItemTimerTests.m */; };
 		0EA09C2D1832840A0066A567 /* sadtrombone.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0EA09C2C1832840A0066A567 /* sadtrombone.wav */; };
 		0EA09C2F1832847F0066A567 /* red_button.png in Resources */ = {isa = PBXBuildFile; fileRef = 0EA09C2E1832847F0066A567 /* red_button.png */; };
+		0EB9BD7B1832F33E006F2ABE /* ding.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0EB9BD7A1832F33E006F2ABE /* ding.wav */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		0EA09C22183283DB0066A567 /* ItemTimerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ItemTimerTests.m; sourceTree = "<group>"; };
 		0EA09C2C1832840A0066A567 /* sadtrombone.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = sadtrombone.wav; sourceTree = "<group>"; };
 		0EA09C2E1832847F0066A567 /* red_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = red_button.png; sourceTree = "<group>"; };
+		0EB9BD7A1832F33E006F2ABE /* ding.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = ding.wav; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +124,7 @@
 				0EA09C0C183283DB0066A567 /* ITViewController.h */,
 				0EA09C0D183283DB0066A567 /* ITViewController.m */,
 				0EA09C2C1832840A0066A567 /* sadtrombone.wav */,
+				0EB9BD7A1832F33E006F2ABE /* ding.wav */,
 				0EA09C0F183283DB0066A567 /* Images.xcassets */,
 				0EA09C2E1832847F0066A567 /* red_button.png */,
 				0EA09BFE183283DB0066A567 /* Supporting Files */,
@@ -235,6 +238,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0EB9BD7B1832F33E006F2ABE /* ding.wav in Resources */,
 				0EA09C10183283DB0066A567 /* Images.xcassets in Resources */,
 				0EA09C2D1832840A0066A567 /* sadtrombone.wav in Resources */,
 				0EA09C02183283DB0066A567 /* InfoPlist.strings in Resources */,
@@ -469,6 +473,7 @@
 				0EA09C28183283DB0066A567 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0EA09C29183283DB0066A567 /* Build configuration list for PBXNativeTarget "ItemTimerTests" */ = {
 			isa = XCConfigurationList;
@@ -477,6 +482,7 @@
 				0EA09C2B183283DB0066A567 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
